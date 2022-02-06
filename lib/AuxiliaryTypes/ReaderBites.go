@@ -139,5 +139,6 @@ func (rtb ReaderBites) topUpBuf() (int,error) {
 		if err == io.EOF {
 			return  0, err
 		}
+
 		return rtb.buf.WriteBitesFromBytes(rtb.readerSlice)
 }
